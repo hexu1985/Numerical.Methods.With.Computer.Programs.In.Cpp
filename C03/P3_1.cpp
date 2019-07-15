@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
@@ -57,22 +58,22 @@ void gauss::gauss_input()           // 数据输入函数
 
 void gauss::gauss_elimination()     // Gauss消去法函数
 {
-    for (k=0; k<(n-1); k++)
+    for (k=0; k<(n-1); k++)			// a[k][k]为主元
     {
-        for (i=(k+1); i<n; i++)
+        for (i=(k+1); i<n; i++)		// 处理第i行, i从k+1开始, 
         {
             if (fabs(a[k][k]) < eps)
             {
                 cout << "\n主元素太小. 失败..." << endl;
                 exit(0);
             }
-            ratio = a[i][k]/a[k][k];
-            for (j=(k+1); j<(n+1); j++)
-            { a[i][j] -= ratio * a[k][j]; }
+            ratio = a[i][k]/a[k][k];	// 计算倍加的倍数
+            for (j=(k+1); j<(n+1); j++)		// 处理第i行的第j列, j从k+1开始
+            { a[i][j] -= ratio * a[k][j]; }	// 将第k行元素倍加到第i行
             a[i][k] = 0;
         }
     }
-    x[n-1] = a[n-1][n]/a[n-1][n-1]; // 回代
+    x[n-1] = a[n-1][n]/a[n-1][n-1]; // 回代, 处理n-1行
     for (i=(n-2); i>=0; i--)
     {
         sum = 0.0;
