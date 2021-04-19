@@ -56,3 +56,12 @@ cat gauss.dat
 ./P3_2
 cat gauss.out
 rm gauss.dat gauss.out
+
+echo
+echo "====================================="
+echo
+
+echo "./P3_3 < E3.7.data"
+cat E3.7.data
+./P3_3 < E3.7.data
+
