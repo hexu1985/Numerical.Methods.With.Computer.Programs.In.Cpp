@@ -1,4 +1,4 @@
-//ÓÃ¸îÏß·¨Çó½â·ÇÏßĞÔ·½³Ì
+//ç”¨å‰²çº¿æ³•æ±‚è§£éçº¿æ€§æ–¹ç¨‹
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -32,18 +32,18 @@ void main()
 
 void secant::solution()
 {
-	cout << "\nÊäÈë³õÊ¼¹ÀÖµx0ºÍx1£º";
+	cout << "\nè¾“å…¥åˆå§‹ä¼°å€¼x0å’Œx1ï¼š";
 	cin >> x_old1 >> x_old2;
-	cout << "\nÊäÈë¹«²î";
+	cout << "\nè¾“å…¥å…¬å·®";
 	cin >> eps;
 	if (fabs(function(x_old1)) < eps)
 	{
-		cout << "\n½âÊÇ£º" << x_old1 << endl;
+		cout << "\nè§£æ˜¯ï¼š" << x_old1 << endl;
 		exit(0);
 	}
 	if (fabs(function(x_old2)) < eps)
 	{
-		cout << "\n½âÊÇ£º" << x_old2 << endl;
+		cout << "\nè§£æ˜¯ï¼š" << x_old2 << endl;
 		exit(0);
 	}
 	do
@@ -51,7 +51,7 @@ void secant::solution()
 		iteration++;
 		if (x_old1 == x_old2)
 		{
-			cout << "\nÓöµ½ÁË´íÎóx(i) = x(i-1)£¬Òì³£ÖĞ¶Ï..." << endl;
+			cout << "\né‡åˆ°äº†é”™è¯¯x(i) = x(i-1)ï¼Œå¼‚å¸¸ä¸­æ–­..." << endl;
 			exit(0);
 		}
 		x_new = x_old2 - (function(x_old2) * (x_old2 - x_old1)) / (function(x_old2) - function(x_old1));
@@ -59,6 +59,6 @@ void secant::solution()
 		x_old1 = x_old2;
 		x_old2 = x_new;
 	}while (error >= eps);
-	cout << "\n½âÊÇ£º" << x_new << endl;
-	cout << "\nÊÕÁ²ÓÚ" << iteration << "´Îµü´ú" << endl;
+	cout << "\nè§£æ˜¯ï¼š" << x_new << endl;
+	cout << "\næ”¶æ•›äº" << iteration << "æ¬¡è¿­ä»£" << endl;
 }

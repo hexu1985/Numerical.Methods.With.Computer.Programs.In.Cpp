@@ -1,4 +1,4 @@
-//ÊµÏÖEulerÔ¤±¨_Ð£Õý·¨
+//å®žçŽ°Euleré¢„æŠ¥_æ ¡æ­£æ³•
 #include <iostream>
 #include <math.h>
 #include <iomanip>
@@ -28,14 +28,14 @@ void main()
 
 void euler::pc()
 {
-	cout << "\nÊäÈë³õÊ¼Ìõ¼þ£º" << endl;
-	cout << "\nÊäÈëx0£º";
+	cout << "\nè¾“å…¥åˆå§‹æ¡ä»¶ï¼š" << endl;
+	cout << "\nè¾“å…¥x0ï¼š";
 	cin >> x;
-	cout << "\nÊäÈëy0£º";
+	cout << "\nè¾“å…¥y0ï¼š";
 	cin >> yc;
-	cout << "\nÊäÈëyÐèÒªµÄxÖµ£º";
+	cout << "\nè¾“å…¥yéœ€è¦çš„xå€¼ï¼š";
 	cin >> x_last;
-	cout << "\nÊäÈëµÈ·ÖÊý£º";
+	cout << "\nè¾“å…¥ç­‰åˆ†æ•°ï¼š";
 	cin >> n;
 	h = (x_last - x) / n;
 	for (i = 0; i < n; i++)

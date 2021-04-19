@@ -1,4 +1,4 @@
-//ÊµÏÖSimpson 3/8·¨Ôò
+//å®žçŽ°Simpson 3/8æ³•åˆ™
 #include <iostream>
 #include <math.h>
 
@@ -28,9 +28,9 @@ void main()
 
 void simpson2::integration()
 {
-	cout << "\nÊäÈëÉÏÏÞºÍÏÂÏÞ£º";
+	cout << "\nè¾“å…¥ä¸Šé™å’Œä¸‹é™ï¼š";
 	cin >> b >> a;
-	cout << endl << "\nÊäÈëÄãÒªÊ¹ÓÃsimpson 3/8·¨ÔòµÄÊýÄ¿£¨¼´µÈ·ÖÊý£©£º";
+	cout << endl << "\nè¾“å…¥ä½ è¦ä½¿ç”¨simpson 3/8æ³•åˆ™çš„æ•°ç›®ï¼ˆå³ç­‰åˆ†æ•°ï¼‰ï¼š";
 	cin >> n;
 	interval = (b - a) / n;
 	one_third_interval = interval / 3.0;
@@ -45,5 +45,5 @@ void simpson2::integration()
 		sum_term3 += func(x + 2 * one_third_interval);
 	}
 	integral = (2 * sum_term1 + 3 * sum_term2 + 3 * sum_term3 - func(a) + func(b)) * (3 * one_third_interval / 8);
-	cout << endl << "»ý·ÖÖµ = " << integral << endl;
+	cout << endl << "ç§¯åˆ†å€¼ = " << integral << endl;
 }

@@ -1,4 +1,4 @@
-//ÓÃGraeffe·¨Çó½â¶àÏîÊ½·½³Ìµ¥Êµ¸ù
+//ç”¨Graeffeæ³•æ±‚è§£å¤šé¡¹å¼æ–¹ç¨‹å•å®æ ¹
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -35,17 +35,17 @@ void main()
 
 void graeffe::solution()
 {
-	cout << "\nÊäÈë¶àÏîÊ½½×Êı£º";
+	cout << "\nè¾“å…¥å¤šé¡¹å¼é˜¶æ•°ï¼š";
 	cin >> n;
 	a = new double[n+1];
 	b = new double[n+1];
 	c = new double[n+1];
 	for (i = 0; i <= n; i++)
 	{
-		cout << "\nÊäÈëa[" << i << "] = ";
+		cout << "\nè¾“å…¥a[" << i << "] = ";
 		cin >> a[i];
 	}
-	cout << "\nÊäÈë¿ÉÒÔÈÏÎª¶àÏîÊ½ÖµÎª0µÄÁ¿£º";
+	cout << "\nè¾“å…¥å¯ä»¥è®¤ä¸ºå¤šé¡¹å¼å€¼ä¸º0çš„é‡ï¼š";
 	cin >> eps;
 	for (i = 1; i <= n; i++)
 	{
@@ -89,16 +89,16 @@ void graeffe::solution()
 		}
 		if (iteration > iteration_max)
 		{
-			cout << "\n¾­¹ı" << iteration_max << "´Îµü´úÃ»ÓĞÕÒµ½¸ù¡£";
+			cout << "\nç»è¿‡" << iteration_max << "æ¬¡è¿­ä»£æ²¡æœ‰æ‰¾åˆ°æ ¹ã€‚";
 			exit(0);
 		}
 	}while (flag == 0);
-	cout << "\nµü´ú´ÎÊı = " << iteration << endl;
+	cout << "\nè¿­ä»£æ¬¡æ•° = " << iteration << endl;
 	for (i = 1; i <= n; i++)
 	{
 		if (b[i] == 0)
 		{
-			cout << "\n´íÎó£¬A[" << i << "] = 0" << endl;
+			cout << "\né”™è¯¯ï¼ŒA[" << i << "] = 0" << endl;
 			exit(0);
 		}
 	}
@@ -123,11 +123,11 @@ void graeffe::solution()
 		}
 		if (fabs(val) < eps)
 		{
-			cout << "\nÕÒµ½ÁË¸ù£¬¸ù = " << root << endl;
+			cout << "\næ‰¾åˆ°äº†æ ¹ï¼Œæ ¹ = " << root << endl;
 		}
 		else
 		{
-			cout << "\n¿ÉÄÜÃ»ÓĞ¸ù£¬¸ùµÄÖµ = " << root << "¡£¶àÏîÊ½µÄÖµ = " << val << endl;
+			cout << "\nå¯èƒ½æ²¡æœ‰æ ¹ï¼Œæ ¹çš„å€¼ = " << root << "ã€‚å¤šé¡¹å¼çš„å€¼ = " << val << endl;
 		}
 	}
 }

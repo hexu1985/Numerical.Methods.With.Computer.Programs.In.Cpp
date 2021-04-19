@@ -1,4 +1,4 @@
-// GaussÏûÈ¥·¨Çó½âÏßĞÔ·½³Ì×é
+// Gaussæ¶ˆå»æ³•æ±‚è§£çº¿æ€§æ–¹ç¨‹ç»„
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -36,7 +36,7 @@ void main()
 
 void gauss::gauss_input()
 {
-	cout << "ÊäÈë·½³ÌµÄ¸öÊı£º";
+	cout << "è¾“å…¥æ–¹ç¨‹çš„ä¸ªæ•°ï¼š";
 	cin >> n;
 	x = new double[n];
 	a = new double*[n];
@@ -47,15 +47,15 @@ void gauss::gauss_input()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëb[" << i << "] = ";
+		cout << "\nè¾“å…¥b[" << i << "] = ";
 		cin >> a[i][n];
 	}
-	cout << "\nÊäÈë×îĞ¡Ö÷ÔªËØ£º";
+	cout << "\nè¾“å…¥æœ€å°ä¸»å…ƒç´ ï¼š";
 	cin >> eps;
 }
 
@@ -67,7 +67,7 @@ void gauss::gauss_elimination()
 		{
 			if (fabs(a[k][k]) < eps)
 			{
-				cout << "\nÖ÷ÔªËØÌ«Ğ¡£¬Ê§°Ü..." << endl;
+				cout << "\nä¸»å…ƒç´ å¤ªå°ï¼Œå¤±è´¥..." << endl;
 				exit(0);
 			}
 			ratio = a[i][k]/a[k][k];
@@ -92,7 +92,7 @@ void gauss::gauss_elimination()
 
 void gauss::gauss_output()
 {
-	cout << "\n½á¹ûÊÇ£º" << endl;
+	cout << "\nç»“æœæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nx[" << i << "] = " << x[i] << endl;

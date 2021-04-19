@@ -1,4 +1,4 @@
-//Lagrange²åÖµ·¨
+//Lagrangeæ’å€¼æ³•
 
 #include <iostream>
 #include <fstream>
@@ -37,7 +37,7 @@ void lagrange::interpolation()
 		fin >> x[i] >> y[i];
 	}
 	fin.close();
-	cout << "\nÊäÈëĞèÒª²åÖµµÄµã£º";
+	cout << "\nè¾“å…¥éœ€è¦æ’å€¼çš„ç‚¹ï¼š";
 	cin >> z;
 	sum = 0.0;
 	for (i = 0; i < n; i++)
@@ -52,5 +52,5 @@ void lagrange::interpolation()
 		}
 		sum += mult * y[i];
 	}
-	cout << "\n²å²¹µÄÖµ = " << sum << endl;
+	cout << "\næ’è¡¥çš„å€¼ = " << sum << endl;
 }

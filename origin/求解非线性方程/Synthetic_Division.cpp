@@ -1,4 +1,4 @@
-//µ±Ò»¸öÁãµãÒÑÖªÊ±½µµÍ¶àÏîÊ½½×µÄ×ÛºÏ³ı·¨
+//å½“ä¸€ä¸ªé›¶ç‚¹å·²çŸ¥æ—¶é™ä½å¤šé¡¹å¼é˜¶çš„ç»¼åˆé™¤æ³•
 #include <iostream>
 
 using namespace std;
@@ -26,24 +26,24 @@ void main()
 
 void synthetic::synthetic_division()
 {
-	cout << "\nÊäÈë¶àÏîÊ½µÄ½×Êı£º";
+	cout << "\nè¾“å…¥å¤šé¡¹å¼çš„é˜¶æ•°ï¼š";
 	cin >> n;
 	a = new double[n+1];
 	b = new double[n];
-	cout << "\nÊäÈëÔ­¶àÏîÊ½ÏµÊı£ºa0 + a1 * x + a2 * x^2 + ..." << endl;
+	cout << "\nè¾“å…¥åŸå¤šé¡¹å¼ç³»æ•°ï¼ša0 + a1 * x + a2 * x^2 + ..." << endl;
 	for (i = 0; i <= n; i++)
 	{
-		cout << "\nÊäÈëa[" << i << "] = ";
+		cout << "\nè¾“å…¥a[" << i << "] = ";
 		cin >> a[i];
 	}
-	cout << "\nÊäÈë¸ùµÄÖµ£º";
+	cout << "\nè¾“å…¥æ ¹çš„å€¼ï¼š";
 	cin >> root;
 	b[n-1] = a[n];
 	for (i = (n - 2); i >= 0; i--)
 	{
 		b[i] = a[i+1] + b[i+1] * root;
 	}
-	cout << "\n½µ½×¶àÏîÊ½µÄÏµÊıÊÇ£º" << endl;
+	cout << "\né™é˜¶å¤šé¡¹å¼çš„ç³»æ•°æ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nb[" << i << "] = " << b[i] << endl;

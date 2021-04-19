@@ -1,4 +1,4 @@
-//¾ßÓÐ×î´óÖ÷ÔªËØµÄGauss_JordanÏûÈ¥·¨Çó½âÏßÐÔ·½³Ì×é
+//å…·æœ‰æœ€å¤§ä¸»å…ƒç´ çš„Gauss_Jordanæ¶ˆåŽ»æ³•æ±‚è§£çº¿æ€§æ–¹ç¨‹ç»„
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -36,7 +36,7 @@ void main()
 
 void jordan::jordan_input()
 {
-	cout << "\nÊäÈë·½³ÌµÄ¸öÊý£º";
+	cout << "\nè¾“å…¥æ–¹ç¨‹çš„ä¸ªæ•°ï¼š";
 	cin >> n;
 	row = new int[n];
 	col = new int[n];
@@ -49,15 +49,15 @@ void jordan::jordan_input()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëb[" << i << "] = ";
+		cout << "\nè¾“å…¥b[" << i << "] = ";
 		cin >> a[i][n];
 	}
-	cout << "\nÊäÈë×îÐ¡Ö÷ÔªËØ£º";
+	cout << "\nè¾“å…¥æœ€å°ä¸»å…ƒç´ ï¼š";
 	cin >> eps;
 }
 
@@ -118,8 +118,8 @@ void jordan::jordan_reduction()
 		}
 		else
 		{
-			cout << "\n×î´óµÄÖ÷ÔªËØ = " << pivot << endl;
-			cout << "\n¾ØÕó¿ÉÄÜÆæÒì£¬Ê§°Ü..." << endl;
+			cout << "\næœ€å¤§çš„ä¸»å…ƒç´  = " << pivot << endl;
+			cout << "\nçŸ©é˜µå¯èƒ½å¥‡å¼‚ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -131,7 +131,7 @@ void jordan::jordan_reduction()
 
 void jordan::jordan_output()
 {
-	cout << "\n½á¹ûÊÇ£º" << endl;
+	cout << "\nç»“æžœæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nx[" << i << "] = " << x[i] << endl;

@@ -1,4 +1,4 @@
-//ÓÃ¿ìËÙÅÅĞò·¨¶ÔÊı×éÔªËØ½øĞĞÅÅĞò
+//ç”¨å¿«é€Ÿæ’åºæ³•å¯¹æ•°ç»„å…ƒç´ è¿›è¡Œæ’åº
 #include <iostream>
 
 using namespace std;
@@ -25,26 +25,26 @@ void main()
 	sort.sorting();
 }
 
-//ÅÅĞòº¯Êı
+//æ’åºå‡½æ•°
 void qusort::sorting()
 {
-	cout << "\nÊäÈëÔªËØ¸öÊı£º";
+	cout << "\nè¾“å…¥å…ƒç´ ä¸ªæ•°ï¼š";
 	cin >> n;
 	x = new double[n];
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëx[" << i << "] = ";
+		cout << "\nè¾“å…¥x[" << i << "] = ";
 		cin >> x[i];
 	}
 	quicksort(x, 0, (n-1));
-	cout << "\nÅÅĞòºÃµÄÊı×éÊÇ£º" << endl;
+	cout << "\næ’åºå¥½çš„æ•°ç»„æ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nx[" << i << "] = " << x[i] << endl;
 	}
 }
 
-//¿ìËÙËã·¨ÅÅĞòº¯Êı
+//å¿«é€Ÿç®—æ³•æ’åºå‡½æ•°
 void qusort::quicksort(double *x, int left, int right)
 {
 	l_h = left;

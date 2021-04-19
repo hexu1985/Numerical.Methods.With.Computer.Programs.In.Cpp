@@ -1,4 +1,4 @@
-//³¬ËÉ³ÚGauss_Seidelµü´ú
+//è¶…æ¾å¼›Gauss_Seidelè¿­ä»£
 #include <iostream>
 #include <math.h>
 
@@ -40,7 +40,7 @@ void main()
 
 void relaxation::relaxation_input()
 {
-	cout << "\nÊäÈë·½³ÌµÄ¸öÊı£º";
+	cout << "\nè¾“å…¥æ–¹ç¨‹çš„ä¸ªæ•°ï¼š";
 	cin >> n;
 	x = new double[n];
 	xold = new double[n];
@@ -53,22 +53,22 @@ void relaxation::relaxation_input()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëb[" << i << "] = ";
+		cout << "\nè¾“å…¥b[" << i << "] = ";
 		cin >> b[i];
 	}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëx[" << i << "] = ";
+		cout << "\nè¾“å…¥x[" << i << "] = ";
 		cin >> x[i];
 	}
-	cout << "\nÊäÈëÈ¨Òò×Ów = ";
+	cout << "\nè¾“å…¥æƒå› å­w = ";
 	cin >> w;
-	cout << "\nÊäÈëÏà¶ÔÎó²îÈİĞíÁ¿£º";
+	cout << "\nè¾“å…¥ç›¸å¯¹è¯¯å·®å®¹è®¸é‡ï¼š";
 	cin >> eps;
 }
 
@@ -108,10 +108,10 @@ void relaxation::relaxation_subst()
 
 void relaxation::relaxation_output()
 {
-	cout << "\n½á¹ûÊÇ£º" << endl;
+	cout << "\nç»“æœæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nx[" << i << "] = " << x[i];
 	}
-	cout << "\nÊÕÁ²ÓÚ" << iteration << "´Îµü´ú" << endl;
+	cout << "\næ”¶æ•›äº" << iteration << "æ¬¡è¿­ä»£" << endl;
 }

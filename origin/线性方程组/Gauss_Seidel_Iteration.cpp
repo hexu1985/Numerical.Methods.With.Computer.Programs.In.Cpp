@@ -1,4 +1,4 @@
-//Gauss_Seidel迭代法求解对角线占绝对优势的系统
+//Gauss_Seidel杩唬娉曟眰瑙ｅ瑙掔嚎鍗犵粷瀵逛紭鍔跨殑绯荤粺
 #include <iostream>
 #include <math.h>
 
@@ -40,7 +40,7 @@ void main()
 
 void seidel::seidel_input()
 {
-	cout << "\n输入方程的个数：";
+	cout << "\n杈撳叆鏂圭▼鐨勪釜鏁帮細";
 	cin >> n;
 	x = new double[n];
 	b = new double[n];
@@ -52,20 +52,20 @@ void seidel::seidel_input()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\n输入a[" << i << "][" << j << "] = ";
+			cout << "\n杈撳叆a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\n输入b[" << i << "] = ";
+		cout << "\n杈撳叆b[" << i << "] = ";
 		cin >> b[i];
 	}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\n输入x[" << i << "] = ";
+		cout << "\n杈撳叆x[" << i << "] = ";
 		cin >> x[i];
 	}
-	cout << "\n输入相对误差容许量：";
+	cout << "\n杈撳叆鐩稿璇樊瀹硅閲忥細";
 	cin >> eps;
 }
 
@@ -98,10 +98,10 @@ void seidel::seidel_subst()
 
 void seidel::seidel_output()
 {
-	cout << "\n结果是：" << endl;
+	cout << "\n缁撴灉鏄細" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nx[" << i << "] = " << x[i];
 	}
-	cout << "\n迭代次数 = " << iteration << endl;
+	cout << "\n杩唬娆℃暟 = " << iteration << endl;
 }

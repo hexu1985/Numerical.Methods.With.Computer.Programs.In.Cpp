@@ -1,4 +1,4 @@
-//ÏòÁ¿µã»ı¡¢¾ØÕóÓëÏòÁ¿³Ë»ı¡¢ÏòÁ¿Óë¾ØÕó³Ë»ı¡¢¾ØÕóÏà¼Ó¡¢¾ØÕóÏà³ËÔËËã
+//å‘é‡ç‚¹ç§¯ã€çŸ©é˜µä¸å‘é‡ä¹˜ç§¯ã€å‘é‡ä¸çŸ©é˜µä¹˜ç§¯ã€çŸ©é˜µç›¸åŠ ã€çŸ©é˜µç›¸ä¹˜è¿ç®—
 #include <iostream>
 #include <process.h>
 
@@ -20,12 +20,12 @@ public:
 void main()
 {
 	int choice;
-	cout << "\n¼ÆËãÁ½¸öÏòÁ¿µã»ı£¬ÊäÈë1" << endl;
-	cout << "\n¼ÆËã¾ØÕóºÍÏòÁ¿³Ë»ı£¬ÊäÈë2" << endl;
-	cout << "\n¼ÆËãÏòÁ¿ºÍ¾ØÕó³Ë»ı£¬ÊäÈë3" << endl;
-	cout << "\nÊµÏÖÁ½¸ö¾ØÕóÏà¼Ó£¬ÊäÈë4" << endl;
-	cout << "\nÊµÏÖÁ½¸ö¾ØÕóÏà³Ë£¬ÊäÈë5" << endl;
-	cout << "\nÊäÈëÄãµÄÑ¡Ôñ£¨1 - 5£©";
+	cout << "\nè®¡ç®—ä¸¤ä¸ªå‘é‡ç‚¹ç§¯ï¼Œè¾“å…¥1" << endl;
+	cout << "\nè®¡ç®—çŸ©é˜µå’Œå‘é‡ä¹˜ç§¯ï¼Œè¾“å…¥2" << endl;
+	cout << "\nè®¡ç®—å‘é‡å’ŒçŸ©é˜µä¹˜ç§¯ï¼Œè¾“å…¥3" << endl;
+	cout << "\nå®ç°ä¸¤ä¸ªçŸ©é˜µç›¸åŠ ï¼Œè¾“å…¥4" << endl;
+	cout << "\nå®ç°ä¸¤ä¸ªçŸ©é˜µç›¸ä¹˜ï¼Œè¾“å…¥5" << endl;
+	cout << "\nè¾“å…¥ä½ çš„é€‰æ‹©ï¼ˆ1 - 5ï¼‰";
 	cin >> choice;
 	switch (choice)
 	{
@@ -50,30 +50,30 @@ void main()
 		matrix_multiplication.mat_mult();
 		break;
 	default:
-		cout << "\nÄãÊäÈëÁË´íÎóµÄÑ¡Ôñ¡£" << endl;
+		cout << "\nä½ è¾“å…¥äº†é”™è¯¯çš„é€‰æ‹©ã€‚" << endl;
 		exit(0);
 	}
 }
 
-//¼ÆËãÏòÁ¿µã»ıº¯Êı
+//è®¡ç®—å‘é‡ç‚¹ç§¯å‡½æ•°
 void matrix::vector_dot()
 {
 	int i;
 	double *x, *y;
-	cout << "\nÊäÈëÏòÁ¿Î¬Êı£º";
+	cout << "\nè¾“å…¥å‘é‡ç»´æ•°ï¼š";
 	cin >> n;
 	x = new double[n];
 	y = new double[n];
-	cout << "\nÊäÈëÏòÁ¿xµÄ¸÷·ÖÁ¿£º" << endl;
+	cout << "\nè¾“å…¥å‘é‡xçš„å„åˆ†é‡ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëx[" << i << "] = ";
+		cout << "\nè¾“å…¥x[" << i << "] = ";
 		cin >> x[i];
 	}
-	cout << "\nÊäÈëÏòÁ¿yµÄ¸÷·ÖÁ¿£º" << endl;
+	cout << "\nè¾“å…¥å‘é‡yçš„å„åˆ†é‡ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëy[" << i << "] = ";
+		cout << "\nè¾“å…¥y[" << i << "] = ";
 		cin >> y[i];
 	}
 	double sum = 0.0;
@@ -81,17 +81,17 @@ void matrix::vector_dot()
 	{
 		sum += x[i]*y[i];
 	}
-	cout << "\nµã»ıÊÇ" << sum << endl;
+	cout << "\nç‚¹ç§¯æ˜¯" << sum << endl;
 	delete[] x, y;
 }
 
-//¼ÆËã¾ØÕóºÍÏòÁ¿³Ë»ıº¯Êı
+//è®¡ç®—çŸ©é˜µå’Œå‘é‡ä¹˜ç§¯å‡½æ•°
 void matrix::mat_vec()
 {
 	int i, j;
 	double *x, *z;
 	double **a;
-	cout << "\nÊäÈë¾ØÕó½×Êı£º";
+	cout << "\nè¾“å…¥çŸ©é˜µé˜¶æ•°ï¼š";
 	cin >> n;
 	x = new double[n];
 	z = new double[n];
@@ -100,17 +100,17 @@ void matrix::mat_vec()
 	{
 		a[i] = new double[n];
 	}
-	cout << "\nÊäÈë¾ØÕó¸÷ÔªËØ£º" << endl;
+	cout << "\nè¾“å…¥çŸ©é˜µå„å…ƒç´ ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
-	cout << "\nÊäÈëÏòÁ¿x¸÷·ÖÁ¿£º" << endl;
+	cout << "\nè¾“å…¥å‘é‡xå„åˆ†é‡ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëx[" << i << "] = ";
+		cout << "\nè¾“å…¥x[" << i << "] = ";
 		cin >> x[i];
 	}
 	for (i = 0; i < n; i++)
@@ -123,7 +123,7 @@ void matrix::mat_vec()
 			}
 		}
 	}
-	cout << "\n³Ë»ıÏòÁ¿ÊÇ£º" << endl;
+	cout << "\nä¹˜ç§¯å‘é‡æ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nz[" << i << "] = " << z[i] << endl;
@@ -136,13 +136,13 @@ void matrix::mat_vec()
 	delete[] a;
 }
 
-//¼ÆËãÏòÁ¿ºÍ¾ØÕó³Ë»ıº¯Êı
+//è®¡ç®—å‘é‡å’ŒçŸ©é˜µä¹˜ç§¯å‡½æ•°
 void matrix::vec_mat()
 {
 	int j, k;
 	double *x, *z;
 	double **a;
-	cout << "\nÊäÈë¾ØÕó½×Êı£º";
+	cout << "\nè¾“å…¥çŸ©é˜µé˜¶æ•°ï¼š";
 	cin >> n;
 	x = new double[n];
 	z = new double[n];
@@ -151,17 +151,17 @@ void matrix::vec_mat()
 	{
 		a[k] = new double[n];
 	}
-	cout << "\nÊäÈëÏòÁ¿x¸÷·ÖÁ¿£º" << endl;
+	cout << "\nè¾“å…¥å‘é‡xå„åˆ†é‡ï¼š" << endl;
 	for (k = 0; k < n; k++)
 	{
-		cout << "\nÊäÈëx[" << k << "] = ";
+		cout << "\nè¾“å…¥x[" << k << "] = ";
 		cin >> x[k];
 	}
-	cout << "\nÊäÈë¾ØÕó¸÷ÔªËØ£º" << endl;
+	cout << "\nè¾“å…¥çŸ©é˜µå„å…ƒç´ ï¼š" << endl;
 	for (k = 0; k < n; k++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << k << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << k << "][" << j << "] = ";
 			cin >> a[k][j];
 		}
 	
@@ -175,7 +175,7 @@ void matrix::vec_mat()
 			}
 		}
 	}
-	cout << "\n³Ë»ıÏòÁ¿ÊÇ£º" << endl;
+	cout << "\nä¹˜ç§¯å‘é‡æ˜¯ï¼š" << endl;
 	for (j = 0; j < n; j++)
 	{
 		cout << "\nz[" << j << "] = " << z[j] << endl;
@@ -188,12 +188,12 @@ void matrix::vec_mat()
 	delete[] a;
 }
 
-//Á½¸ö¾ØÕóÏà¼Óº¯Êı
+//ä¸¤ä¸ªçŸ©é˜µç›¸åŠ å‡½æ•°
 void matrix::mat_add()
 {
 	int i, j;
 	double **a, **b, **c;
-	cout << "\nÊäÈë¾ØÕó½×Êı£º";
+	cout << "\nè¾“å…¥çŸ©é˜µé˜¶æ•°ï¼š";
 	cin >> n;
 	a = new double*[n];
 	for (i = 0; i < n; i++)
@@ -210,18 +210,18 @@ void matrix::mat_add()
 	{
 		c[i] = new double[n];
 	}
-	cout << "\nÊäÈë¾ØÕóA¸÷ÔªËØ£º" << endl;
+	cout << "\nè¾“å…¥çŸ©é˜µAå„å…ƒç´ ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
-	cout << "\nÊäÈë¾ØÕóB¸÷ÔªËØ£º" << endl;
+	cout << "\nè¾“å…¥çŸ©é˜µBå„å…ƒç´ ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëb[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥b[" << i << "][" << j << "] = ";
 			cin >> b[i][j];
 		}
 	for (i = 0; i < n; i++)
@@ -229,7 +229,7 @@ void matrix::mat_add()
 		{
 			c[i][j] = a[i][j] + b[i][j];
 		}
-	cout << "\n½á¹û¾ØÕóÊÇ£º" << endl;
+	cout << "\nç»“æœçŸ©é˜µæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
@@ -252,12 +252,12 @@ void matrix::mat_add()
 	delete[] c;
 }
 
-//Á½¸ö¾ØÕóÏà³Ëº¯Êı
+//ä¸¤ä¸ªçŸ©é˜µç›¸ä¹˜å‡½æ•°
 void matrix::mat_mult()
 {
 	int i, j, k;
 	double **a, **b, **c;
-	cout << "\nÊäÈë¾ØÕó½×Êı£º";
+	cout << "\nè¾“å…¥çŸ©é˜µé˜¶æ•°ï¼š";
 	cin >> n;
 	a = new double*[n];
 	for (i = 0; i < n; i++)
@@ -274,18 +274,18 @@ void matrix::mat_mult()
 	{
 		c[i] = new double[n];
 	}
-	cout << "\nÊäÈë¾ØÕóA¸÷ÔªËØ£º" << endl;
+	cout << "\nè¾“å…¥çŸ©é˜µAå„å…ƒç´ ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
-	cout << "\nÊäÈë¾ØÕóB¸÷ÔªËØ£º" << endl;
+	cout << "\nè¾“å…¥çŸ©é˜µBå„å…ƒç´ ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëb[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥b[" << i << "][" << j << "] = ";
 			cin >> b[i][j];
 		}
 	for (i = 0; i < n; i++)
@@ -299,7 +299,7 @@ void matrix::mat_mult()
 			{
 				c[i][j] += a[i][k] * b[k][j];
 			}
-	cout << "\n½á¹û¾ØÕóÊÇ£º" << endl;
+	cout << "\nç»“æœçŸ©é˜µæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{

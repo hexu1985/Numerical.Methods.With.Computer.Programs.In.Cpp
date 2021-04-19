@@ -1,4 +1,4 @@
-//Èı´ÎÑùÌõº¯ÊıÄâºÏÊı¾İ
+//ä¸‰æ¬¡æ ·æ¡å‡½æ•°æ‹Ÿåˆæ•°æ®
 
 #include <iostream>
 #include <iomanip>
@@ -34,7 +34,7 @@ void main()
 	spline.spline_plot();
 }
 
-//Êı¾İÊäÈëº¯Êı
+//æ•°æ®è¾“å…¥å‡½æ•°
 void cspline::input()
 {
 	ifstream fin("cspline.txt");
@@ -54,13 +54,13 @@ void cspline::input()
 	{
 		if (x[i] <= x[i-1])
 		{
-			cout << "\n´íÎó£¬ÒÔxÉıĞòÊäÈëÊı¾İ¡£" << endl;
+			cout << "\né”™è¯¯ï¼Œä»¥xå‡åºè¾“å…¥æ•°æ®ã€‚" << endl;
 			exit(0);
 		}
 	}
 }
 
-//¼ÆËã¶ş½×µ¼ÊıµÄº¯Êı
+//è®¡ç®—äºŒé˜¶å¯¼æ•°çš„å‡½æ•°
 void cspline::spline_deriv()
 {
 	v[0] = 0.0;
@@ -98,7 +98,7 @@ void cspline::spline_deriv()
 	}
 }
 
-//»­Í¼º¯Êı
+//ç”»å›¾å‡½æ•°
 void cspline::spline_plot()
 {
 	h = 0.001 * (x[n-1] - x[0]);
@@ -114,7 +114,7 @@ void cspline::spline_plot()
 	fout.close();
 }
 
-//¼ÆËãÈı´ÎÑùÌõº¯Êı
+//è®¡ç®—ä¸‰æ¬¡æ ·æ¡å‡½æ•°
 void cspline::spline_interp()
 {
 	low_limit = 0;

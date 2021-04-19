@@ -1,4 +1,4 @@
-//¼ÆËãGammaº¯ÊýÖµ
+//è®¡ç®—Gammaå‡½æ•°å€¼
 #include <iostream>
 
 using namespace std;
@@ -23,7 +23,7 @@ void main()
 
 void gamma::solution()
 {
-	cout << "\nÊäÈëx£¨x > 0£© = ";
+	cout << "\nè¾“å…¥xï¼ˆx > 0ï¼‰ = ";
 	cin >> x;
 	y = x;
 	if (x > 2)
@@ -40,7 +40,7 @@ void gamma::solution()
 	{
 		result = gamma_fn(x);
 	}
-	cout << "\nÔÚ" << y << "µãµÄGammaº¯ÊýÖµ = " << result << endl;
+	cout << "\nåœ¨" << y << "ç‚¹çš„Gammaå‡½æ•°å€¼ = " << result << endl;
 }
 
 double gamma::gamma_fn(double y)

@@ -1,4 +1,4 @@
-//Newton_Cotes±ÕºÏ»ı·Ö¹«Ê½
+//Newton_Cotesé—­åˆç§¯åˆ†å…¬å¼
 #include <iostream>
 #include <math.h>
 
@@ -27,9 +27,9 @@ void main()
 
 void trapezoidal::integration()
 {
-	cout << "\nÊäÈëÏÂÏŞºÍÉÏÏŞ£º";
+	cout << "\nè¾“å…¥ä¸‹é™å’Œä¸Šé™ï¼š";
 	cin >> a >> b;
-	cout << "\nÊäÈëÄãÒªµÄ¶ÎÊı£º";
+	cout << "\nè¾“å…¥ä½ è¦çš„æ®µæ•°ï¼š";
 	cin >> n;
 	h = (b - a) / n;
 	sum = 0.0;
@@ -38,5 +38,5 @@ void trapezoidal::integration()
 		sum += func(a + k * h);
 	}
 	integral = (h / 2.0) * (func(a) + 2.0 * sum + func(b));
-	cout << endl << "»ı·ÖÖµ = " << integral << endl;
+	cout << endl << "ç§¯åˆ†å€¼ = " << integral << endl;
 }

@@ -1,4 +1,4 @@
-//GaussÇó»ı·¨Îåµã¹«Ê½
+//Gaussæ±‚ç§¯æ³•äº”ç‚¹å…¬å¼
 #include <iostream>
 #include <math.h>
 
@@ -38,7 +38,7 @@ void quadrature::integration()
 	x[2] = 0.0;
 	x[3] = 0.53846931;
 	x[4] = 0.90617985;
-	cout << "\nÊäÈëÏÂÏŞºÍÉÏÏŞ£º";
+	cout << "\nè¾“å…¥ä¸‹é™å’Œä¸Šé™ï¼š";
 	cin >> a >> b;
 	sum = 0.0;
 	for (i = 0; i < 5; i++)
@@ -46,5 +46,5 @@ void quadrature::integration()
 		sum += w[i] * func((x[i] * (b - a) + b + a) / 2);
 	}
 	integral = ((b - a) / 2) * sum;
-	cout << endl << "»ı·ÖÖµ = " << integral << endl;
+	cout << endl << "ç§¯åˆ†å€¼ = " << integral << endl;
 }

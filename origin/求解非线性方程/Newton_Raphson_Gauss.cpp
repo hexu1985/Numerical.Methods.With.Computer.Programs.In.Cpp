@@ -1,4 +1,4 @@
-//ÓÃNewton_Raphson·¨Çó½â·ÇÏßĞÔ·½³Ì×é
+//ç”¨Newton_Raphsonæ³•æ±‚è§£éçº¿æ€§æ–¹ç¨‹ç»„
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -121,7 +121,7 @@ void multivariable::gauss()
 			}
 		if (pivot < 1e-10)
 		{
-			cout << "\n¾ØÕó¿ÉÄÜÆæÒì£¬Ê§°Ü..." << endl;
+			cout << "\nçŸ©é˜µå¯èƒ½å¥‡å¼‚ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 		if (pivrow[k] != k)
@@ -198,13 +198,13 @@ void multivariable::solution()
 {
 	n = 3;
 	memory_allocation();
-	cout << "\nÊäÈëËùÓĞÎ´ÖªÊıµÄ³õÊ¼¹ÀÖµ£º" << endl;
+	cout << "\nè¾“å…¥æ‰€æœ‰æœªçŸ¥æ•°çš„åˆå§‹ä¼°å€¼ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈë³õÖµx[" << i << "] = ";
+		cout << "\nè¾“å…¥åˆå€¼x[" << i << "] = ";
 		cin >> x_old[i];
 	}
-	cout << "\nÊäÈë¹«²î£º";
+	cout << "\nè¾“å…¥å…¬å·®ï¼š";
 	cin >> eps;
 	do
 	{
@@ -234,10 +234,10 @@ void multivariable::solution()
 			}
 		}
 	}while (epsilon == 1);
-	cout << "\n½âÊÇ£º" << endl;
+	cout << "\nè§£æ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nx_new[" << i << "] = " << x_new[i] << endl;
 	}
-	cout << "\nÊÕÁ²ÓÚ" << iteration << "´Îµü´ú" << endl;
+	cout << "\næ”¶æ•›äº" << iteration << "æ¬¡è¿­ä»£" << endl;
 }

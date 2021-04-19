@@ -1,4 +1,4 @@
-//¼ÆËãÊı¾İµÄÆ½¾ùÖµ¡¢·½²îºÍ±ê×¼²î
+//è®¡ç®—æ•°æ®çš„å¹³å‡å€¼ã€æ–¹å·®å’Œæ ‡å‡†å·®
 #include <iostream>
 #include <math.h>
 
@@ -31,12 +31,12 @@ void main()
 
 void MeanVar::mean_var()
 {
-	cout << "\nÊäÈë¹Û²â´ÎÊı£º";
+	cout << "\nè¾“å…¥è§‚æµ‹æ¬¡æ•°ï¼š";
 	cin >> n;
 	x = new double[n];
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëx[" << i << "] = ";
+		cout << "\nè¾“å…¥x[" << i << "] = ";
 		cin >> x[i];
 	}
 	for (i = 0; i < n; i++)
@@ -44,13 +44,13 @@ void MeanVar::mean_var()
 		xbar += x[i];
 	}
 	xbar /= n;
-	cout << "\nÆ½¾ùÖµ = " << xbar << endl;
+	cout << "\nå¹³å‡å€¼ = " << xbar << endl;
 	for (i = 0; i < n; i++)
 	{
 		var += (x[i] - xbar)*(x[i] - xbar);
 	}
 	var /= (n-1);
-	cout << "\n·½²î = " << var << endl;
+	cout << "\næ–¹å·® = " << var << endl;
 	std_dev = sqrt(var);
-	cout << "\n±ê×¼²îÊÇ " << std_dev << endl;
+	cout << "\næ ‡å‡†å·®æ˜¯ " << std_dev << endl;
 }

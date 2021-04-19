@@ -1,4 +1,4 @@
-//¶àÔª»Ø¹é
+//å¤šå…ƒå›žå½’
 #include <iostream>
 #include <math.h>
 #include <fstream>
@@ -60,7 +60,7 @@ void multiple::input()
 	fin >> n;
 	if (n > (m - 1))
 	{
-		cout << "\nÊý¾Ý²»¹»£¬ÖÕÖ¹..." << endl;
+		cout << "\næ•°æ®ä¸å¤Ÿï¼Œç»ˆæ­¢..." << endl;
 		exit(0);
 	}
 	y = new double[m];
@@ -93,7 +93,7 @@ void multiple::input()
 	fin.close();
 }
 
-//¶àÔª»Ø¹éº¯Êý
+//å¤šå…ƒå›žå½’å‡½æ•°
 void multiple::mult_regression()
 {
 	for (i = 0; i < n; i++)
@@ -121,7 +121,7 @@ void multiple::mult_regression()
 		}
 		a[i][n] = term3 - term4;
 	}
-	//È«Ö÷ÔªGuassÏûÈ¥·¨
+	//å…¨ä¸»å…ƒGuassæ¶ˆåŽ»æ³•
 	for (k = 0; k < (n-1); k++)
 	{
 		pivot = fabs(a[k][k]);
@@ -140,7 +140,7 @@ void multiple::mult_regression()
 			}
 		if (pivot < 1.0e-10)
 		{
-			cout << "\n¾ØÕóÆæÒì£¬Òì³£ÖÐ¶Ï..." << endl;
+			cout << "\nçŸ©é˜µå¥‡å¼‚ï¼Œå¼‚å¸¸ä¸­æ–­..." << endl;
 			exit(0);
 		}
 		if (pivrow[k] != k)
@@ -173,7 +173,7 @@ void multiple::mult_regression()
 			}
 		}
 	}
-	//»Ø´ú
+	//å›žä»£
 	b[n-1] = a[n-1][n] / a[n-1][n-1];
 	for (i = (n - 2); i >= 0; i--)
 	{
@@ -201,9 +201,9 @@ void multiple::mult_regression()
 		sum6 += b[i] * sum2;
 	}
 	alpha = (sum5 - sum6) / m;
-	cout << "\nÄâºÏ¶àÔª»Ø¹é£ºy = a + b0 * x0 + b1 * x1 + ..." << endl;
-	cout << "\n×Ô±äÁ¿¸öÊý£¨n£© = " << n << endl;
-	cout << "\nÏµÊýÊÇ£º" << endl;
+	cout << "\næ‹Ÿåˆå¤šå…ƒå›žå½’ï¼šy = a + b0 * x0 + b1 * x1 + ..." << endl;
+	cout << "\nè‡ªå˜é‡ä¸ªæ•°ï¼ˆnï¼‰ = " << n << endl;
+	cout << "\nç³»æ•°æ˜¯ï¼š" << endl;
 	cout << "\na = " << alpha << endl;
 	for (i = 0; i < n; i++)
 	{

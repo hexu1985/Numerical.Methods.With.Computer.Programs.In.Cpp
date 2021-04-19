@@ -1,4 +1,4 @@
-//Thomas·¨Çó½âÈý¶Ô½Ç·½³Ì×é
+//Thomasæ³•æ±‚è§£ä¸‰å¯¹è§’æ–¹ç¨‹ç»„
 #include <iostream>
 #include <math.h>
 
@@ -28,7 +28,7 @@ void main()
 
 void tridiagonal::input()
 {
-	cout << "\nÊäÈë·½³ÌµÄ¸öÊý£º";
+	cout << "\nè¾“å…¥æ–¹ç¨‹çš„ä¸ªæ•°ï¼š";
 	cin >> n;
 	a = new double[n-1];
 	b = new double[n];
@@ -39,22 +39,22 @@ void tridiagonal::input()
 	x = new double[n];
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëb[" << i << "] = ";
+		cout << "\nè¾“å…¥b[" << i << "] = ";
 		cin >> b[i];
 	}
 	for (i = 0; i < (n-1); i++)
 	{
-		cout << "\nÊäÈëc[" << i << "] = ";
+		cout << "\nè¾“å…¥c[" << i << "] = ";
 		cin >> c[i];
 	}
 	for (i = 1; i < n; i++)
 	{
-		cout << "\nÊäÈëa[" << i << "] = ";
+		cout << "\nè¾“å…¥a[" << i << "] = ";
 		cin >> a[i-1];
 	}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈër[" << i << "] = ";
+		cout << "\nè¾“å…¥r[" << i << "] = ";
 		cin >> r[i];
 	}
 }

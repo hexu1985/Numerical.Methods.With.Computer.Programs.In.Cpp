@@ -1,4 +1,4 @@
-//ÊµÏÖ¶à²½Euler·¨
+//å®žçŽ°å¤šæ­¥Euleræ³•
 #include <iostream>
 #include <math.h>
 #include <iomanip>
@@ -28,16 +28,16 @@ void main()
 
 void multi_euler::pc()
 {
-	cout << "\nÊäÈë³õÊ¼Ìõ¼þ£º" << endl;
-	cout << "\nÊäÈëx0£º";
+	cout << "\nè¾“å…¥åˆå§‹æ¡ä»¶ï¼š" << endl;
+	cout << "\nè¾“å…¥x0ï¼š";
 	cin >> x;
-	cout << "\nÊäÈëy0£º";
+	cout << "\nè¾“å…¥y0ï¼š";
 	cin >> yc;
-	cout << "\nÊäÈëy(-1)£º";
+	cout << "\nè¾“å…¥y(-1)ï¼š";
 	cin >> yc_old;
-	cout << "\nÊäÈëyÐèÒªµÄxÖµ£º";
+	cout << "\nè¾“å…¥yéœ€è¦çš„xå€¼ï¼š";
 	cin >> x_last;
-	cout << "\nÊäÈëµÈ·ÖÊý£º";
+	cout << "\nè¾“å…¥ç­‰åˆ†æ•°ï¼š";
 	cin >> n;
 	h = (x_last - x) / n;
 	cout.precision(7);

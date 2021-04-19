@@ -1,4 +1,4 @@
-//Éú³ÉÒ»×éÊı¾İµÄÀÛ»ı·Ö²¼
+//ç”Ÿæˆä¸€ç»„æ•°æ®çš„ç´¯ç§¯åˆ†å¸ƒ
 #include <iostream>
 #include <stdlib.h>
 #include <iomanip>
@@ -28,20 +28,20 @@ void main()
 
 void cumulative::cumul()
 {
-	cout << "\nÊäÈë¹Û²â´ÎÊı£º";
+	cout << "\nè¾“å…¥è§‚æµ‹æ¬¡æ•°ï¼š";
 	cin >> n;
 	x = new double[n];
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëx[" << i << "] = ";
+		cout << "\nè¾“å…¥x[" << i << "] = ";
 		cin >> x[i];
 	}
-	//ÉùÃ÷qsortĞèÒªµÄ±È½Ïº¯ÊıµÄ
+	//å£°æ˜qsortéœ€è¦çš„æ¯”è¾ƒå‡½æ•°çš„
 	int doublecmp(const void *v1, const void *v2);
 
-	//ÎªÁË¶ÔÊı×éÅÅĞò£¬µ÷ÓÃC++¿âº¯Êıqsort£¨ÔÚstdlib.hÖĞ¶¨ÒåµÄ£©
+	//ä¸ºäº†å¯¹æ•°ç»„æ’åºï¼Œè°ƒç”¨C++åº“å‡½æ•°qsortï¼ˆåœ¨stdlib.hä¸­å®šä¹‰çš„ï¼‰
 	qsort(x, n, sizeof(double), doublecmp);
-	cout << "\nÊäÈëÇø¼ä¸öÊı£º";
+	cout << "\nè¾“å…¥åŒºé—´ä¸ªæ•°ï¼š";
 	cin >> interval;
 	h = (x[n-1] - x[0]) / interval;
 	upplim = x[0] + h;
@@ -65,7 +65,7 @@ void cumulative::cumul()
 	}
 }
 
-//ÓÃ»§¶¨ÒåµÄ¶ÔÓÚqsortµÄ±È½Ïº¯Êı
+//ç”¨æˆ·å®šä¹‰çš„å¯¹äºqsortçš„æ¯”è¾ƒå‡½æ•°
 int doublecmp(const void *v1, const void *v2)
 {
 	double p = ((*(double *)v1 - *(double *)v2));

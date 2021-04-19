@@ -1,4 +1,4 @@
-//ÓÃRKG·¨Çó½âÎ¢·Ö·½³Ì
+//ç”¨RKGæ³•æ±‚è§£å¾®åˆ†æ–¹ç¨‹
 #include <iostream>
 #include <math.h>
 #include <iomanip>
@@ -28,14 +28,14 @@ void main()
 
 void rkg::solution()
 {
-	cout << "\nÊäÈë³õÊ¼Ìõ¼þ£º" << endl;
-	cout << "\nÊäÈëx0£º";
+	cout << "\nè¾“å…¥åˆå§‹æ¡ä»¶ï¼š" << endl;
+	cout << "\nè¾“å…¥x0ï¼š";
 	cin >> x;
-	cout << "\nÊäÈëy0£º";
+	cout << "\nè¾“å…¥y0ï¼š";
 	cin >> y;
-	cout << "\nÊäÈëxf£º";
+	cout << "\nè¾“å…¥xfï¼š";
 	cin >> xf;
-	cout << "\nÊäÈëµÈ·ÖÊý£º";
+	cout << "\nè¾“å…¥ç­‰åˆ†æ•°ï¼š";
 	cin >> n;
 	h = (xf - x) / n;
 	a = (sqrt(2.0) - 1) / 2;

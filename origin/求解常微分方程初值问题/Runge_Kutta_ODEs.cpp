@@ -1,4 +1,4 @@
-//ÓÃRKG·¨Çó½â³£Î¢·Ö·½³Ì×é
+//ç”¨RKGæ³•æ±‚è§£å¸¸å¾®åˆ†æ–¹ç¨‹ç»„
 #include <iostream>
 #include <math.h>
 #include <iomanip>

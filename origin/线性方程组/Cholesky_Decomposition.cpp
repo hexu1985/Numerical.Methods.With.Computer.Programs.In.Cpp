@@ -1,4 +1,4 @@
-//Cholesky·Ö½âÇó½â¶Ô³ÆÕý¶¨¾ØÕó
+//Choleskyåˆ†è§£æ±‚è§£å¯¹ç§°æ­£å®šçŸ©é˜µ
 
 #include <iostream>
 #include <math.h>
@@ -39,7 +39,7 @@ void main()
 
 void cholesky::cholesky_input()
 {
-	cout << "\nÊäÈë·½³Ì¸öÊý£º";
+	cout << "\nè¾“å…¥æ–¹ç¨‹ä¸ªæ•°ï¼š";
 	cin >> n;
 	b = new double[n];
 	d = new double[n];
@@ -52,7 +52,7 @@ void cholesky::cholesky_input()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	for (i =0; i < n; i++)
@@ -60,20 +60,20 @@ void cholesky::cholesky_input()
 		{
 			if (a[i][j] != a[j][i])
 			{
-				cout << "\nÏµÊý¾ØÕó²»¶Ô³Æ£¬Ê§°Ü..." << endl;
+				cout << "\nç³»æ•°çŸ©é˜µä¸å¯¹ç§°ï¼Œå¤±è´¥..." << endl;
 				exit(0);
 			}
 		}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëb[" << i << "] = ";
+		cout << "\nè¾“å…¥b[" << i << "] = ";
 		cin >> b[i];
 	}
 }
 
 void cholesky::cholesky_decomposition()
 {
-//cholesky·Ö½â
+//choleskyåˆ†è§£
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
@@ -86,7 +86,7 @@ void cholesky::cholesky_decomposition()
 			{
 				if (sum <= 0)
 				{
-					cout << "\n¾ØÕó·ÇÕý¶¨£¬Ê§°Ü..." << endl;
+					cout << "\nçŸ©é˜µéžæ­£å®šï¼Œå¤±è´¥..." << endl;
 					exit(0);
 				}
 				d[i] = sqrt(sum);
@@ -96,7 +96,7 @@ void cholesky::cholesky_decomposition()
 				a[j][i] = sum / d[i];
 			}
 		}
-//Ç°Ïò´úÈë
+//å‰å‘ä»£å…¥
 		for (i = 0; i < n; i++)
 		{
 			sum = b[i];
@@ -106,7 +106,7 @@ void cholesky::cholesky_decomposition()
 			}
 			x[i] = sum / d[i];
 		}
-//ºóÏò´úÈë
+//åŽå‘ä»£å…¥
 		for (i = (n-1); i >= 0; i--)
 		{
 			sum = x[i];
@@ -120,7 +120,7 @@ void cholesky::cholesky_decomposition()
 
 void cholesky::cholesky_output()
 {
-	cout << "\n½á¹ûÊÇ£º" << endl;
+	cout << "\nç»“æžœæ˜¯ï¼š" << endl;
 	for (i= 0; i < n; i++)
 	{
 		cout << "\nx[" << i << "] = " << x[i] << endl;

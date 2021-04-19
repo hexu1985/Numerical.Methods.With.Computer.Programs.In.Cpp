@@ -1,4 +1,4 @@
-//ÓÃ¾ßÓĞ×î´óÖ÷ÔªËØµÄGauss-JordanÏûÈ¥·¨Çó¾ØÕóµÄÄæ
+//ç”¨å…·æœ‰æœ€å¤§ä¸»å…ƒç´ çš„Gauss-Jordanæ¶ˆå»æ³•æ±‚çŸ©é˜µçš„é€†
 #include <iostream>
 #include <math.h>
 #include <fstream>
@@ -151,8 +151,8 @@ void inverse::inverse_jordan_reduction()
 		}
 		else
 		{
-			cout << "\n×î´óµÄÖ÷ÔªËØ = " << pivot << endl;
-			cout << "\n¾ØÕó¿ÉÄÜÆæÒì£¬Ê§°Ü..." << endl;
+			cout << "\næœ€å¤§çš„ä¸»å…ƒç´  = " << pivot << endl;
+			cout << "\nçŸ©é˜µå¯èƒ½å¥‡å¼‚ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -183,7 +183,7 @@ void inverse::inverse_jordan_reduction()
 void inverse::inverse_output()
 {
 	ofstream fout("inverse.out");
-	fout << "\nÄæ¾ØÕóÊÇ£º" << endl;
+	fout << "\né€†çŸ©é˜µæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
@@ -205,7 +205,7 @@ void inverse::inverse_check()
 			}
 			c[i][j] = sum;
 		}
-	fout << endl << "\nÊäÈëµÄ¾ØÕóÓëËüµÄÄæ¾ØÕóµÄ³Ë»ı£º" << endl;
+	fout << endl << "\nè¾“å…¥çš„çŸ©é˜µä¸å®ƒçš„é€†çŸ©é˜µçš„ä¹˜ç§¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{

@@ -1,4 +1,4 @@
-//ÓÃÊÔÉä·¨Çó½â±ßÖµÎÊÌâ
+//ç”¨è¯•å°„æ³•æ±‚è§£è¾¹å€¼é—®é¢˜
 #include <iostream>
 #include <math.h>
 #include <iomanip>
@@ -54,7 +54,7 @@ void s_ode::solution()
 	xf = 30.0;
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëy[" << i << "] = ";
+		cout << "\nè¾“å…¥y[" << i << "] = ";
 		cin >> y[i];
 	}
 	h = (xf - xi) / l;

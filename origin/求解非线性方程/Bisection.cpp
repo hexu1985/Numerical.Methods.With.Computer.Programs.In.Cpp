@@ -1,4 +1,4 @@
-//ÓÃ¶Ô·Ö·¨Çó½â·ÇÏßĞÔ·½³Ì
+//ç”¨å¯¹åˆ†æ³•æ±‚è§£éçº¿æ€§æ–¹ç¨‹
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -32,27 +32,27 @@ void main()
 
 void bisection::solution()
 {
-	cout << "\nÊäÈëÏÂÏŞ£º";
+	cout << "\nè¾“å…¥ä¸‹é™ï¼š";
 	cin >> x_low;
-	cout << "\nÊäÈëÉÏÏŞ£º";
+	cout << "\nè¾“å…¥ä¸Šé™ï¼š";
 	cin >> x_high;
 	f_low = function(x_low);
 	f_high = function(x_high);
 	if ((f_low * f_high) > 0)
 	{
-		cout << "\n´íÎóµÄ¹éÀà¡£" << endl;
+		cout << "\né”™è¯¯çš„å½’ç±»ã€‚" << endl;
 		exit(0);
 	}
-	cout << "\nÊäÈë¹«²î£º";
+	cout << "\nè¾“å…¥å…¬å·®ï¼š";
 	cin >> eps;
 	if (fabs(f_low) < eps)
 	{
-		cout << "\n½âÊÇ£º" << x_low << endl;
+		cout << "\nè§£æ˜¯ï¼š" << x_low << endl;
 		exit(0);
 	}
 	if (fabs(f_high) < eps)
 	{
-		cout << "\n½âÊÇ£º" << x_high << endl;
+		cout << "\nè§£æ˜¯ï¼š" << x_high << endl;
 		exit(0);
 	}
 	do
@@ -71,6 +71,6 @@ void bisection::solution()
 			f_low = f_new;
 		}
 	}while (error >= eps);
-	cout << "\n½âÊÇ£º" << x_new << endl;
-	cout << "\nÊÕÁ²ÓÚ" << iteration << "´Îµü´ú" << endl;
+	cout << "\nè§£æ˜¯ï¼š" << x_new << endl;
+	cout << "\næ”¶æ•›äº" << iteration << "æ¬¡è¿­ä»£" << endl;
 }

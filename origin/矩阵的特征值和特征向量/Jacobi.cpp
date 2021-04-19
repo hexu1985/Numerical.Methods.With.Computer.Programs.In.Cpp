@@ -1,4 +1,4 @@
-//Jacobi·¨È·¶¨¶Ô³Æ¾ØÕóÌØÕ÷ÖµÓëÌØÕ÷ÏòÁ¿
+//Jacobiæ³•ç¡®å®šå¯¹ç§°çŸ©é˜µç‰¹å¾å€¼ä¸ç‰¹å¾å‘é‡
 #include <iostream>
 #include <math.h>
 #include <iomanip>
@@ -48,7 +48,7 @@ void main()
 
 void jacobi::solution()
 {
-	cout << "\nÊäÈë¾ØÕó½×Êı£º";
+	cout << "\nè¾“å…¥çŸ©é˜µé˜¶æ•°ï¼š";
 	cin >> n;
 	aik = new double[n];
 	eigen = new double[n];
@@ -71,7 +71,7 @@ void jacobi::solution()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	s1 = 0.0;
@@ -164,21 +164,21 @@ void jacobi::solution()
 	}while (flag == 1);
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÌØÕ÷Öµ[" << i << "] = " << eigen[i] << endl;
+		cout << "\nç‰¹å¾å€¼[" << i << "] = " << eigen[i] << endl;
 	}
-	cout << "\nÊÕÁ²ÓÚ" << iteration << "´Îµü´ú¡£" << endl;
-	cout << "\nÊäÈë¾ØÕóµÄ¼£ = " << sum << endl;
+	cout << "\næ”¶æ•›äº" << iteration << "æ¬¡è¿­ä»£ã€‚" << endl;
+	cout << "\nè¾“å…¥çŸ©é˜µçš„è¿¹ = " << sum << endl;
 	sum = 0.0;
 	for (i = 0; i < n; i++)
 	{
 		sum += eigen[i];
 	}
-	cout << "\nÌØÕ÷ÖµÖ®ºÍ = " << sum << endl;
-	cout << "\nÌØÕ÷ÏòÁ¿ÊÇ£º" << endl;
+	cout << "\nç‰¹å¾å€¼ä¹‹å’Œ = " << sum << endl;
+	cout << "\nç‰¹å¾å‘é‡æ˜¯ï¼š" << endl;
 	cout.precision (4);
 	for (j = 0; j < n; j++)
 	{
-		cout << "\nÌØÕ÷ÏòÁ¿[" << j << "]: " << endl << endl;
+		cout << "\nç‰¹å¾å‘é‡[" << j << "]: " << endl << endl;
 		for (i = 0; i < n; i++)
 		{
 			cout << t[i][j] << setw(10);

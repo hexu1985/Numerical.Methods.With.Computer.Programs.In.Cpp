@@ -1,4 +1,4 @@
-//ÓÃÖğ´Î´úÈë·¨Çó½â·ÇÏßĞÔ·½³Ì
+//ç”¨é€æ¬¡ä»£å…¥æ³•æ±‚è§£éçº¿æ€§æ–¹ç¨‹
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -32,13 +32,13 @@ void main()
 
 void successive::solution()
 {
-	cout << "\nÊäÈë³õÊ¼¹ÀÖµ£º";
+	cout << "\nè¾“å…¥åˆå§‹ä¼°å€¼ï¼š";
 	cin >> x_old;
-	cout << "\nÊäÈë¹«²î£º";
+	cout << "\nè¾“å…¥å…¬å·®ï¼š";
 	cin >> eps;
 	if (fabs(x_old - function(x_old)) < eps)
 	{
-		cout << "\n½âÊÇ£º" << x_old << endl;
+		cout << "\nè§£æ˜¯ï¼š" << x_old << endl;
 		exit(0);
 	}
 	do
@@ -48,6 +48,6 @@ void successive::solution()
 		error = fabs(x_new - function(x_new));
 		x_old = x_new;
 	}while (error >= eps);
-	cout << "\n½âÊÇ£º" << x_new << endl;
-	cout << "\nÊÕÁ²ÓÚ" << iteration << "´Îµü´ú" << endl;
+	cout << "\nè§£æ˜¯ï¼š" << x_new << endl;
+	cout << "\næ”¶æ•›äº" << iteration << "æ¬¡è¿­ä»£" << endl;
 }

@@ -1,4 +1,4 @@
-//ÇúÏß»Ø¹é×îĞ¡¶ş³Ë¶àÏîÊ½
+//æ›²çº¿å›å½’æœ€å°äºŒä¹˜å¤šé¡¹å¼
 #include <iostream>
 #include <math.h>
 #include <fstream>
@@ -52,11 +52,11 @@ void polynomial::input()
 {
 	ifstream fin("poly.txt");
 	fin >> m;
-	cout << "\nÊäÈë¶àÏîÊ½½×Êı£¨×î´ó = " << m - 1 << "£©£º";
+	cout << "\nè¾“å…¥å¤šé¡¹å¼é˜¶æ•°ï¼ˆæœ€å¤§ = " << m - 1 << "ï¼‰ï¼š";
 	cin >> n;
 	if (n > (m - 1))
 	{
-		cout << "\n´íÎóµÄ½×Êı£¬ÖÕÖ¹..." << endl;
+		cout << "\né”™è¯¯çš„é˜¶æ•°ï¼Œç»ˆæ­¢..." << endl;
 		exit(0);
 	}
 	x = new double[m];
@@ -81,10 +81,10 @@ void polynomial::input()
 	fin.close();
 }
 
-//ÄâºÏ¶àÏîÊ½ÇúÏßµÄº¯Êı
+//æ‹Ÿåˆå¤šé¡¹å¼æ›²çº¿çš„å‡½æ•°
 void polynomial::poly_line()
 {
-	//¼ÆËãÏµÊıb[i]
+	//è®¡ç®—ç³»æ•°b[i]
 	for (i = 1; i <= n; i++)
 	{
 		for (j = 1; j <= n; j++)
@@ -110,7 +110,7 @@ void polynomial::poly_line()
 		}
 		a[i-1][n] = term3 - term4;
 	}
-	//È«Ö÷ÔªGuassÏûÈ¥·¨
+	//å…¨ä¸»å…ƒGuassæ¶ˆå»æ³•
 	for (k = 0; k < (n - 1); k++)
 	{
 		pivot = fabs(a[k][k]);
@@ -129,7 +129,7 @@ void polynomial::poly_line()
 			}
 		if (pivot < 1.0e-10)
 		{
-			cout << "\n¾ØÕóÆæÒì£¬Òì³£ÖĞ¶Ï..." << endl;
+			cout << "\nçŸ©é˜µå¥‡å¼‚ï¼Œå¼‚å¸¸ä¸­æ–­..." << endl;
 			exit(0);
 		}
 		if (pivrow[k] != k)
@@ -162,7 +162,7 @@ void polynomial::poly_line()
 			}
 		}
 	}
-	//»Ø´ú
+	//å›ä»£
 	b[n-1] = a[n-1][n] / a[n-1][n-1];
 	for (i = (n - 2); i >= 0; i--)
 	{
@@ -190,9 +190,9 @@ void polynomial::poly_line()
 		sum6 += b[i-1] * sum2;
 	}
 	alpha = (sum5 - sum6) / m;
-	cout << "\nÄâºÏ¶àÏîÊ½£ºY = a + b0 * x + b1 * x^2 + ..." << endl;
-	cout << "\n½×Êı£¨n£© = " << n << endl;
-	cout << "\nÏµÊıÊÇ£º" << endl;
+	cout << "\næ‹Ÿåˆå¤šé¡¹å¼ï¼šY = a + b0 * x + b1 * x^2 + ..." << endl;
+	cout << "\né˜¶æ•°ï¼ˆnï¼‰ = " << n << endl;
+	cout << "\nç³»æ•°æ˜¯ï¼š" << endl;
 	cout << "\na = " << alpha << endl;
 	for (i = 0; i < n; i++)
 	{

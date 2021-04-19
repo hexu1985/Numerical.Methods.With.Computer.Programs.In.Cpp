@@ -1,4 +1,4 @@
-//ÓÃLin·¨Çó½â¶à·½Ê½·½³Ì¹²éî¸´¸ù
+//ç”¨Linæ³•æ±‚è§£å¤šæ–¹å¼æ–¹ç¨‹å…±è½­å¤æ ¹
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -34,18 +34,18 @@ void main()
 
 void lin::solution()
 {
-	cout << "\nÊäÈë¶àÏîÊ½½×Êı£º";
+	cout << "\nè¾“å…¥å¤šé¡¹å¼é˜¶æ•°ï¼š";
 	cin >> n;
 	if (n < 4)
 	{
-		cout << "\nÖÁÉÙ4½×¡£" << endl;
+		cout << "\nè‡³å°‘4é˜¶ã€‚" << endl;
 		exit(0);
 	}
 	a = new double[n+1];
 	b = new double[n-1];
 	for (k = 0; k <= n; k++)
 	{
-		cout << "\nÊäÈëa[" << k << "] = ";
+		cout << "\nè¾“å…¥a[" << k << "] = ";
 		cin >> a[k];
 	}
 	for (k = 1; k <= n; k++)
@@ -54,7 +54,7 @@ void lin::solution()
 	}
 	a[0] = 1.0;
 	b[0] = 1.0;
-	cout << "\nÊäÈëgammaºÍdeltaµÄ³õÖµ£º";
+	cout << "\nè¾“å…¥gammaå’Œdeltaçš„åˆå€¼ï¼š";
 	cin >> gamma >> delta;
 	do
 	{
@@ -82,7 +82,7 @@ void lin::solution()
 			}
 			if (iteration > iteration_max)
 			{
-				cout << "\nÔÚ" << iteration_max << "´Îµü´úºó²»ÊÕÁ²" << endl;
+				cout << "\nåœ¨" << iteration_max << "æ¬¡è¿­ä»£åä¸æ”¶æ•›" << endl;
 				cout << gamma << "     " << delta << endl;
 				for (k = 0; k <= (n-2); k++)
 				{
@@ -92,7 +92,7 @@ void lin::solution()
 			}
 		}
 	}while (flag == 0);
-	cout << "\nµü´ú´ÎÊı = " << iteration << endl;
+	cout << "\nè¿­ä»£æ¬¡æ•° = " << iteration << endl;
 	cout << "\ngamma = " << gamma << endl;
 	cout << "\ndelta = " << delta << endl;
 	for (k = 0; k <= (n - 2); k++)

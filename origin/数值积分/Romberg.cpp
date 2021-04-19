@@ -1,4 +1,4 @@
-//RombergÇó»ý·¨
+//Rombergæ±‚ç§¯æ³•
 #include <iostream>
 #include <fstream>
 #include <math.h>

@@ -1,4 +1,4 @@
-//¾ßÓĞÁĞÑ¡Ö÷ÔªºÍ´ÓÇ°µ½ºó´úÈëµÄLU·Ö½â
+//å…·æœ‰åˆ—é€‰ä¸»å…ƒå’Œä»å‰åˆ°åä»£å…¥çš„LUåˆ†è§£
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -37,7 +37,7 @@ void main()
 
 void lu::lu_input()
 {
-	cout << "\nÊäÈë·½³Ì¸öÊı£º";
+	cout << "\nè¾“å…¥æ–¹ç¨‹ä¸ªæ•°ï¼š";
 	cin >> n;
 	b = new double[n];
 	pivrow = new int[n];
@@ -49,24 +49,24 @@ void lu::lu_input()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	for (i = 0; i < n; i++)
 	{
-		cout << "\nÊäÈëb[" << i << "] = ";
+		cout << "\nè¾“å…¥b[" << i << "] = ";
 		cin >> b[i];
 	}
-	cout << "\nÊäÈë×îĞ¡Ö÷ÔªËØ£º";
+	cout << "\nè¾“å…¥æœ€å°ä¸»å…ƒç´ ï¼š";
 	cin >> eps;
 }
 
 void lu::lu_decomposition()
 {
-//LU·Ö½â
+//LUåˆ†è§£
 	for (j = 0; j < n; j++)
 	{
-//¼ÆËãÉÏÈı½Ç¾ØÕóU
+//è®¡ç®—ä¸Šä¸‰è§’çŸ©é˜µU
 		if (j > 0)
 		{
 			for (i = 0; i < j; i++)
@@ -87,7 +87,7 @@ void lu::lu_decomposition()
 			}
 		}
 		pivot = 0.0;
-//¼ÆËãÏÂÈı½Ç¾ØÕóL
+//è®¡ç®—ä¸‹ä¸‰è§’çŸ©é˜µL
 		for (i = j; i < n; i++)
 		{
 			if (j > 0)
@@ -111,10 +111,10 @@ void lu::lu_decomposition()
 		}
 		if (pivot < eps)
 		{
-			cout << "\n¾ØÕó¿ÉÄÜÆæÒì£¬Ê§°Ü..." << endl;
+			cout << "\nçŸ©é˜µå¯èƒ½å¥‡å¼‚ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
-//ÁĞÑ¡Ö÷Ôª
+//åˆ—é€‰ä¸»å…ƒ
 		if (pivrow[j] != j)
 		{
 			for (k = 0; k < n; k++)
@@ -124,7 +124,7 @@ void lu::lu_decomposition()
 				a[j][k] = a1;
 			}
 		}
-//¼ÆËãÏÂÈı½Ç¾ØÕóL
+//è®¡ç®—ä¸‹ä¸‰è§’çŸ©é˜µL
 		if (j != (n-1))
 		{
 			for (i = (j+1); i < n; i++)
@@ -133,7 +133,7 @@ void lu::lu_decomposition()
 			}
 		}
 	}
-//´ÓÇ°µ½ºó´úÈë£¬ÏÈ¼ÆËãLY = B
+//ä»å‰åˆ°åä»£å…¥ï¼Œå…ˆè®¡ç®—LY = B
 	for (i = 0; i < n; i++)
 	{
 		sum = b[pivrow[i]];
@@ -147,7 +147,7 @@ void lu::lu_decomposition()
 		}
 		b[i] = sum;
 	}
-//ÔÙ¼ÆËãUX = Y
+//å†è®¡ç®—UX = Y
 	for (i = (n-1); i >= 0; i--)
 	{
 		sum = b[i];
@@ -164,7 +164,7 @@ void lu::lu_decomposition()
 
 void lu::lu_output()
 {
-	cout << "\n½á¹ûÊÇ£º" << endl;
+	cout << "\nç»“æœæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		cout << "\nx[" << i << "] = " << b[i] << endl;

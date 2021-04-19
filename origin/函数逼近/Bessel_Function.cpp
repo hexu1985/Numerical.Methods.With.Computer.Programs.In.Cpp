@@ -1,4 +1,4 @@
-//¼ÆËãµÚÒ»ÀàºÍµÚ¶þÀàµÄ0½×ºÍ1½×Besselº¯Êý
+//è®¡ç®—ç¬¬ä¸€ç±»å’Œç¬¬äºŒç±»çš„0é˜¶å’Œ1é˜¶Besselå‡½æ•°
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -81,11 +81,11 @@ void bessel::bessel_functions()
 	h[4] = 0.00074348;
 	h[5] = 0.00079824;
 	h[6] = -0.00029166;
-	cout << "\nÊäÈëx = ";
+	cout << "\nè¾“å…¥x = ";
 	cin >> x;
 	if (x < 0)
 	{
-		cout << "\nÊäÈëÖµ´óÓÚ»òµÈÓÚ0¡£" << endl;
+		cout << "\nè¾“å…¥å€¼å¤§äºŽæˆ–ç­‰äºŽ0ã€‚" << endl;
 		exit(0);
 	}
 	p = (x / 3) * (x / 3);

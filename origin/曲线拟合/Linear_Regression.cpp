@@ -1,4 +1,4 @@
-//ÏßÐÔ»Ø¹é
+//çº¿æ€§å›žå½’
 #include <iostream>
 #include <math.h>
 #include <fstream>
@@ -44,17 +44,17 @@ public:
 void main()
 {
 	int choice;
-	cout << "\n¿ÉÓÃÏÂÁÐ·½³ÌÄâºÏ£º" << endl;
-	cout << "\n1. Ö±Ïß£ºY = A * X + B" << endl;
-	cout << "\n2. Ö¸Êý1£ºY = A * (B ^ X)" << endl;
-	cout << "\n3. Ö¸Êý2£ºY = A * EXP(B * X)" << endl;
-	cout << "\n4. Ö¸Êý3£ºY = A * EXP(X) + B" << endl;
-	cout << "\n5. ÃÝº¯Êý£ºY = A * (X ^ B)" << endl;
-	cout << "\n6. ¶ÔÊýº¯Êý£ºY = A * LN(X) + B" << endl;
-	cout << "\n7. Æ½·½¸ùº¯Êý£ºY = A * SQRT(X) + B" << endl;
-	cout << "\n8. 1/3´ÎÃÝº¯Êý£ºY = A * (X ^ 0.33) + B" << endl;
-	cout << "\n9. ·´±Èº¯Êý£ºY = A / X + B" << endl;
-	cout << "\nÊäÈëÄãµÄÑ¡Ôñ£¨1 - 9£©";
+	cout << "\nå¯ç”¨ä¸‹åˆ—æ–¹ç¨‹æ‹Ÿåˆï¼š" << endl;
+	cout << "\n1. ç›´çº¿ï¼šY = A * X + B" << endl;
+	cout << "\n2. æŒ‡æ•°1ï¼šY = A * (B ^ X)" << endl;
+	cout << "\n3. æŒ‡æ•°2ï¼šY = A * EXP(B * X)" << endl;
+	cout << "\n4. æŒ‡æ•°3ï¼šY = A * EXP(X) + B" << endl;
+	cout << "\n5. å¹‚å‡½æ•°ï¼šY = A * (X ^ B)" << endl;
+	cout << "\n6. å¯¹æ•°å‡½æ•°ï¼šY = A * LN(X) + B" << endl;
+	cout << "\n7. å¹³æ–¹æ ¹å‡½æ•°ï¼šY = A * SQRT(X) + B" << endl;
+	cout << "\n8. 1/3æ¬¡å¹‚å‡½æ•°ï¼šY = A * (X ^ 0.33) + B" << endl;
+	cout << "\n9. åæ¯”å‡½æ•°ï¼šY = A / X + B" << endl;
+	cout << "\nè¾“å…¥ä½ çš„é€‰æ‹©ï¼ˆ1 - 9ï¼‰";
 	cin >> choice;
 	regression curvefit;
 	curvefit.regression_input();
@@ -88,7 +88,7 @@ void regression::sline()
 	summations();
 	a = (n * sum_xy - sum_x * sum_y) / (n * sum_xsq - pow(sum_x, 2));
 	b = (sum_y - a * sum_x) / n;
-	cout << "\nÄâºÏÖ±Ïß£ºY = A * X + B" << endl;
+	cout << "\næ‹Ÿåˆç›´çº¿ï¼šY = A * X + B" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i ++)
 	{
@@ -103,7 +103,7 @@ void regression::exp1()
 	{
 		if (y[i] <= 0.0)
 		{
-			cout << "\n²»¿ÉÄÜÄâºÏÖ¸Êýº¯Êý£¬Ê§°Ü..." << endl;
+			cout << "\nä¸å¯èƒ½æ‹ŸåˆæŒ‡æ•°å‡½æ•°ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -116,7 +116,7 @@ void regression::exp1()
 	a = (sum_y - b * sum_x) / n;
 	a = exp(a);
 	b = exp(b);
-	cout << "\nÄâºÏÖ¸Êýº¯Êý1£ºY  = A * (B ^ X)" << endl;
+	cout << "\næ‹ŸåˆæŒ‡æ•°å‡½æ•°1ï¼šY  = A * (B ^ X)" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i++)
 	{
@@ -131,7 +131,7 @@ void regression::exp2()
 	{
 		if (y[i] <= 0.0)
 		{
-			cout << "\n²»¿ÉÄÜÄâºÏÖ¸Êýº¯Êý£¬Ê§°Ü..." << endl;
+			cout << "\nä¸å¯èƒ½æ‹ŸåˆæŒ‡æ•°å‡½æ•°ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -143,7 +143,7 @@ void regression::exp2()
 	b = (n * sum_xy - sum_x * sum_y) / (n * sum_xsq - pow(sum_x, 2));
 	a = (sum_y - b * sum_x) / n;
 	a = exp(a);
-	cout << "\nÄâºÏÖ¸Êýº¯Êý2£ºY  = A * EXP(B * X)" << endl;
+	cout << "\næ‹ŸåˆæŒ‡æ•°å‡½æ•°2ï¼šY  = A * EXP(B * X)" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i++)
 	{
@@ -161,7 +161,7 @@ void regression::exp3()
 	summations();
 	a = (n * sum_xy - sum_x * sum_y) / (n * sum_xsq - pow(sum_x, 2));
 	b = (sum_y - a * sum_x) / n;
-	cout << "\nÄâºÏÖ¸Êýº¯Êý3£ºY  = A * EXP(X) + B" << endl;
+	cout << "\næ‹ŸåˆæŒ‡æ•°å‡½æ•°3ï¼šY  = A * EXP(X) + B" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i++)
 	{
@@ -176,7 +176,7 @@ void regression::power()
 	{
 		if ((y[i] <= 0.0) || (x[i] <= 0.0))
 		{
-			cout << "\n²»¿ÉÄÜÄâºÏÃÝº¯Êý£¬Ê§°Ü..." << endl;
+			cout << "\nä¸å¯èƒ½æ‹Ÿåˆå¹‚å‡½æ•°ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -189,7 +189,7 @@ void regression::power()
 	b = (n * sum_xy - sum_x * sum_y) / (n * sum_xsq - pow(sum_x, 2));
 	a = (sum_y - b * sum_x) / n;
 	a = exp(a);
-	cout << "\nÄâºÏÃÝº¯Êý£ºY = A * (X ^ B)" << endl;
+	cout << "\næ‹Ÿåˆå¹‚å‡½æ•°ï¼šY = A * (X ^ B)" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i++)
 	{
@@ -204,7 +204,7 @@ void regression::logarithmic()
 	{
 		if (x[i] <= 0.0)
 		{
-			cout << "\n²»¿ÉÄÜÄâºÏ¶ÔÊýº¯Êý£¬Ê§°Ü..." << endl;
+			cout << "\nä¸å¯èƒ½æ‹Ÿåˆå¯¹æ•°å‡½æ•°ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -215,7 +215,7 @@ void regression::logarithmic()
 	summations();
 	a = (n * sum_xy - sum_x * sum_y) / (n * sum_xsq - pow(sum_x, 2));
 	b = (sum_y - a * sum_x) / n;
-	cout << "\nÄâºÏ¶ÔÊýº¯Êý£ºY = A * LN(X) + B" << endl;
+	cout << "\næ‹Ÿåˆå¯¹æ•°å‡½æ•°ï¼šY = A * LN(X) + B" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i++)
 	{
@@ -230,7 +230,7 @@ void regression::square_root()
 	{
 		if (x[i] < 0.0)
 		{
-			cout << "\n²»¿ÉÄÜÄâºÏÆ½·½¸ùº¯Êý£¬Ê§°Ü..." << endl;
+			cout << "\nä¸å¯èƒ½æ‹Ÿåˆå¹³æ–¹æ ¹å‡½æ•°ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -241,7 +241,7 @@ void regression::square_root()
 	summations();
 	a = (n * sum_xy - sum_x * sum_y) / (n * sum_xsq - pow(sum_x, 2));
 	b = (sum_y - a * sum_x) / n;
-	cout << "\nÄâºÏÆ½·½¸ùº¯Êý£ºY = A * SQRT(X) + B" << endl;
+	cout << "\næ‹Ÿåˆå¹³æ–¹æ ¹å‡½æ•°ï¼šY = A * SQRT(X) + B" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i++)
 	{
@@ -256,7 +256,7 @@ void regression::one_third()
 	{
 		if (x[i] < 0.0)
 		{
-			cout << "\n²»¿ÉÄÜÄâºÏ1/3´ÎÃÝº¯Êý£¬Ê§°Ü..." << endl;
+			cout << "\nä¸å¯èƒ½æ‹Ÿåˆ1/3æ¬¡å¹‚å‡½æ•°ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -267,7 +267,7 @@ void regression::one_third()
 	summations();
 	a = (n * sum_xy - sum_x * sum_y) / (n * sum_xsq - pow(sum_x, 2));
 	b = (sum_y - a * sum_x) / n;
-	cout << "\nÄâºÏ1/3´ÎÃÝº¯Êý£ºY = A * (X ^ 0.33) + B" << endl;
+	cout << "\næ‹Ÿåˆ1/3æ¬¡å¹‚å‡½æ•°ï¼šY = A * (X ^ 0.33) + B" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i++)
 	{
@@ -282,7 +282,7 @@ void regression::inverse()
 	{
 		if (x[i] == 0.0)
 		{
-			cout << "\n²»¿ÉÄÜÄâºÏ·´±Èº¯Êý£¬Ê§°Ü..." << endl;
+			cout << "\nä¸å¯èƒ½æ‹Ÿåˆåæ¯”å‡½æ•°ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 	}
@@ -293,7 +293,7 @@ void regression::inverse()
 	summations();
 	a = (n * sum_xy - sum_x * sum_y) / (n * sum_xsq - pow(sum_x, 2));
 	b = (sum_y - a * sum_x) / n;
-	cout << "\nÄâºÏ·´±Èº¯Êý£ºY = A / X + B" << endl;
+	cout << "\næ‹Ÿåˆåæ¯”å‡½æ•°ï¼šY = A / X + B" << endl;
 	cout << "\nA = " << a << " B = " << b;
 	for (i = 0; i < n; i++)
 	{

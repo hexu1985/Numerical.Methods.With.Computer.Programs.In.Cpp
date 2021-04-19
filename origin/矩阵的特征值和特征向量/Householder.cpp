@@ -1,4 +1,4 @@
-//Householder±ä»»½«¶Ô³Æ¾ØÕó»¯ÎªÈı¶Ô½ÇĞÎÊ½
+//Householderå˜æ¢å°†å¯¹ç§°çŸ©é˜µåŒ–ä¸ºä¸‰å¯¹è§’å½¢å¼
 #include <iostream>
 #include <math.h>
 #include <stdio.h>
@@ -50,7 +50,7 @@ void main()
 
 void householder::solution()
 {
-	cout << "ÊäÈë¾ØÕó½×Êı£º";
+	cout << "è¾“å…¥çŸ©é˜µé˜¶æ•°ï¼š";
 	cin >> n;
 	w = new double[n];
 	a = new double*[n];
@@ -71,7 +71,7 @@ void householder::solution()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	for (k = 0; k < (n-2); k++)
@@ -130,7 +130,7 @@ void householder::solution()
 				}
 		}
 	}
-	cout << "\nÈı¶Ô½Ç¾ØÕóÊÇ£º" << endl;
+	cout << "\nä¸‰å¯¹è§’çŸ©é˜µæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{

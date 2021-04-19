@@ -1,4 +1,4 @@
-//ÓÃNewton-Raphson·¨Çó½â·ÇÏßĞÔ·½³Ì¸´¸ù
+//ç”¨Newton-Raphsonæ³•æ±‚è§£éçº¿æ€§æ–¹ç¨‹å¤æ ¹
 #include <iostream>
 #include <math.h>
 #include <process.h>
@@ -50,11 +50,11 @@ void main()
 
 void raphson::solution()
 {
-	cout << "\nÊäÈëalpha³õÖµ£º";
+	cout << "\nè¾“å…¥alphaåˆå€¼ï¼š";
 	cin >> alpha_old;
-	cout << "\nÊäÈëbeta³õÖµ£º";
+	cout << "\nè¾“å…¥betaåˆå€¼ï¼š";
 	cin >> beta_old;
-	cout << "\nÊäÈë¹«²î£º";
+	cout << "\nè¾“å…¥å…¬å·®ï¼š";
 	cin >> eps;
 	do
 	{
@@ -66,7 +66,7 @@ void raphson::solution()
 		term5 = term3 * term3 + term4 * term4;
 		if (term5 == 0)
 		{
-			cout << "\nÓöµ½ÁË±»0³ı£¬³ÌĞòÖĞ¶Ï..." << endl;
+			cout << "\né‡åˆ°äº†è¢«0é™¤ï¼Œç¨‹åºä¸­æ–­..." << endl;
 			exit(0);
 		}
 		alpha_new = alpha_old + (term2 * term4 - term1 * term3) / term5;
@@ -80,8 +80,8 @@ void raphson::solution()
 		alpha_old = alpha_new;
 		beta_old = beta_new;
 	}while (flag == 1);
-	cout << "\n½âÊÇ£º" << endl;
-	cout << "\nÊµ²¿£º" << alpha_new << endl;
-	cout << "\nĞé²¿£º" << beta_new << endl;
-	cout << "\nÔÚµÚ" << iteration << "´Îµü´úÊÕÁ²¡£" << endl;
+	cout << "\nè§£æ˜¯ï¼š" << endl;
+	cout << "\nå®éƒ¨ï¼š" << alpha_new << endl;
+	cout << "\nè™šéƒ¨ï¼š" << beta_new << endl;
+	cout << "\nåœ¨ç¬¬" << iteration << "æ¬¡è¿­ä»£æ”¶æ•›ã€‚" << endl;
 }

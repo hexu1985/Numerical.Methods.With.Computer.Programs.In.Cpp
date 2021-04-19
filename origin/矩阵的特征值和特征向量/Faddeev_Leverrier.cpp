@@ -1,4 +1,4 @@
-//Faddeev_Leverrier·¨È·¶¨¾ØÕóÌØÕ÷·½³ÌÏµÊı
+//Faddeev_Leverrieræ³•ç¡®å®šçŸ©é˜µç‰¹å¾æ–¹ç¨‹ç³»æ•°
 #include <iostream>
 
 using namespace std;
@@ -41,10 +41,10 @@ void main()
 	eigen.solution();
 }
 
-//Faddeev_Leverrier·¨
+//Faddeev_Leverrieræ³•
 void faddeev::solution()
 {
-	cout << "ÊäÈë¾ØÕó½×Êı£º";
+	cout << "è¾“å…¥çŸ©é˜µé˜¶æ•°ï¼š";
 	cin >> n;
 	a = new double*[n];
 	for (i = 0; i < n; i++)
@@ -65,7 +65,7 @@ void faddeev::solution()
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++)
 		{
-			cout << "\nÊäÈëa[" << i << "][" << j << "] = ";
+			cout << "\nè¾“å…¥a[" << i << "][" << j << "] = ";
 			cin >> a[i][j];
 		}
 	alpha[0] = 1.0;
@@ -101,14 +101,14 @@ void faddeev::solution()
 			}
 		alpha[k] = trace() / k;
 	}
-	cout << "\nÌØÕ÷¶àÏîÊ½µÄÏµÊıÊÇ£º" << endl;
+	cout << "\nç‰¹å¾å¤šé¡¹å¼çš„ç³»æ•°æ˜¯ï¼š" << endl;
 	for (i = 1; i <= n; i++)
 	{
 		cout << "\nalpha[" << i << "] = " << alpha[i] << endl;
 	}
 }
 
-//¼ÆËã¾ØÕó¼£µÄº¯Êı
+//è®¡ç®—çŸ©é˜µè¿¹çš„å‡½æ•°
 double faddeev::trace()
 {
 	sum1 = 0.0;

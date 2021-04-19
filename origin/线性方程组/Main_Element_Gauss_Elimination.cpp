@@ -1,4 +1,4 @@
-//È«Ñ¡Ö÷ÔªGaussÏûÈ¥·¨
+//å…¨é€‰ä¸»å…ƒGaussæ¶ˆå»æ³•
 #include <iostream>
 #include <fstream>
 #include <math.h>
@@ -90,7 +90,7 @@ void gauss::gauss_elimination()
 			}
 		if (pivot < eps)
 		{
-			cout << "\n¾ØÕó¿ÉÄÜÆæÒì£¬Ê§°Ü..." << endl;
+			cout << "\nçŸ©é˜µå¯èƒ½å¥‡å¼‚ï¼Œå¤±è´¥..." << endl;
 			exit(0);
 		}
 		if (pivrow[k] != k)
@@ -144,7 +144,7 @@ void gauss::gauss_elimination()
 void gauss::gauss_output()
 {
 	ofstream fout("gauss.out");
-	fout << "\n½á¹ûÊÇ£º" << endl;
+	fout << "\nç»“æœæ˜¯ï¼š" << endl;
 	for (i = 0; i < n; i++)
 	{
 		fout << "\nx[" << i << "] = " << x[i] << endl;

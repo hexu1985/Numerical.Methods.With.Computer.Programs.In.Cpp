@@ -1,4 +1,4 @@
-//ÓÃRunge_Kutta_Fehlberg·¨Çó½âÎ¢·Ö·½³Ì
+//ç”¨Runge_Kutta_Fehlbergæ³•æ±‚è§£å¾®åˆ†æ–¹ç¨‹
 #include <iostream>
 #include <math.h>
 #include <iomanip>
@@ -35,13 +35,13 @@ void main()
 
 void rkf::step_adjust()
 {
-	cout << "\nÊäÈëx0£º";
+	cout << "\nè¾“å…¥x0ï¼š";
 	cin >> x;
-	cout << "\nÊäÈëy0£º";
+	cout << "\nè¾“å…¥y0ï¼š";
 	cin >> y;
-	cout << "\nÊäÈëxf£º";
+	cout << "\nè¾“å…¥xfï¼š";
 	cin >> xf;
-	cout << "\nÊäÈëeps£º";
+	cout << "\nè¾“å…¥epsï¼š";
 	cin >> eps;
 	h = xf - x;
 	eps = fabs(eps);

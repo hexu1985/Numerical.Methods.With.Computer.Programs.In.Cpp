@@ -1,4 +1,4 @@
-//¼ÆËã¸ø¶¨º¯ÊıµÄChebyshev±Æ½ü
+//è®¡ç®—ç»™å®šå‡½æ•°çš„Chebyshevé€¼è¿‘
 #include <iostream>
 #include <math.h>
 #include <fstream>
@@ -39,14 +39,14 @@ void main()
 	cheby.cheb_coeff();
 }
 
-//¼ÆËã±Æ½ü¶àÏîÊ½µÄÏµÊı
+//è®¡ç®—é€¼è¿‘å¤šé¡¹å¼çš„ç³»æ•°
 void chebyshev::cheb_coeff()
 {
-	cout << "\nÊäÈën£º";
+	cout << "\nè¾“å…¥nï¼š";
 	cin >> n;
 	c = new double[n];
 	f = new double[n];
-	cout << "\nÊäÈëÇø¼äÏÂÏŞºÍÉÏÏŞ£¨¼´aºÍb£©";
+	cout << "\nè¾“å…¥åŒºé—´ä¸‹é™å’Œä¸Šé™ï¼ˆå³aå’Œbï¼‰";
 	cin >> a >> b;
 	for (i =  0; i < n; i++)
 	{
